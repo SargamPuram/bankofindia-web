@@ -17,9 +17,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/device" element={<DeviceTilt />} />
-          <Route path="/admin" element={<AdminPanel />} />
+{/*           <Route path="/" element={<Index />} /> */}
+          <Route path="/" element={<DeviceTilt />} />
+{/*           <Route path="/admin" element={<AdminPanel />} /> */}
     
           <Route path="*" element={<NotFound />} />
         </Routes>
