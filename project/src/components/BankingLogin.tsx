@@ -976,6 +976,9 @@ const BankingLogin: React.FC = () => {
   const handleKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
     const downTime = keyDownTimes.current.get(e.key);
     if (downTime) {
+      const data= keystrokeData;
+      const d1=keyDownTimes.current.get(e.key);
+      console.log(JSON.stringify(data)+' '+JSON.stringify(d1));
       const holdTime = Date.now() - downTime;
       setKeystrokeData(prev => [...prev, { key: e.key, type: 'hold', time: holdTime }]);
       keyDownTimes.current.delete(e.key);

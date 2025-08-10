@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import AdminPanel from "./pages/AdminPanel";
 import NotFound from "./pages/NotFound";
+import DeviceTilt from "./pages/DeviceTilt";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/device" element={<DeviceTilt />} />
           <Route path="/admin" element={<AdminPanel />} />
     
           <Route path="*" element={<NotFound />} />
